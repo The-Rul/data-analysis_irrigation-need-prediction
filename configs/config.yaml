@@ -1,0 +1,43 @@
+# ============================================================
+# CONFIGURATION FILE - IRRIGATION NEED PREDICTION PROJECT
+# ============================================================
+#
+# Este archivo contiene todos los parámetros del proyecto:
+# - rutas de datos
+# - configuración del modelo
+# - parámetros de entrenamiento
+# - métricas de evaluación
+#
+# Objetivo:
+# Separar la configuración del código para facilitar:
+# - mantenimiento
+# - reproducibilidad
+# - cambios rápidos sin modificar scripts
+#
+# Nota:
+# YAML es sensible a la indentación (usar espacios, no tabs)
+# ============================================================
+
+paths:
+  raw_train: data/raw/train.csv
+  raw_test: data/raw/test.csv
+  processed_train: data/processed/train_processed.csv
+  processed_test: data/processed/test_processed.csv
+  model_output: models/model.joblib
+  metrics_output: reports/metrics.json
+
+target:
+  name: Irrigation_Mode
+
+split:
+  test_size: 0.2
+  random_state: 42
+
+model:
+  name: random_forest
+  n_estimators: 100
+  max_depth: 5
+
+features:
+  numeric: []
+  categorical: []
