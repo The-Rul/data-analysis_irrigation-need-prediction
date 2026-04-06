@@ -27,7 +27,7 @@ paths:
   metrics_output: reports/metrics.json
 
 target:
-  name: Irrigation_Mode
+  name: Irrigation_Need
 
 split:
   test_size: 0.2
