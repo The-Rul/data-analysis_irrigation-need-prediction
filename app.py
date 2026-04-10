@@ -38,7 +38,7 @@ APP_STYLES = """
 """
 
 st.set_page_config(
-    page_title="Dashboard de Portfolio",
+    page_title="Análisis Exploratorio (EDA)",
     layout="wide",
 )
 
@@ -49,7 +49,7 @@ navigation = st.navigation(
         st.Page(str(APP_DIR / "Home.py"), title="Inicio", default=True),
         st.Page(
             str(APP_DIR / "pages" / "1_Portfolio_Dashboard.py"),
-            title="Dashboard de Portfolio",
+            title="Análisis Exploratorio (EDA)",
         ),
     ]
 )

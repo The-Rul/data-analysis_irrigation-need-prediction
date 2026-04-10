@@ -13,8 +13,8 @@ if str(APP_DIR) not in sys.path:
 from utils.data_loader import get_data_paths, load_dataset, summarize_dataset
 
 
-st.title("Dashboard de Portfolio")
-st.caption("Análisis exploratorio orientado a entrevista técnica y decisiones de modelado.")
+st.title("EDA - Predicción de Necesidad de Riego")
+st.caption("Análisis exploratorio datase")
 
 train_path, test_path = get_data_paths()
 df = load_dataset(train_path)
@@ -22,9 +22,7 @@ summary = summarize_dataset(df)
 
 st.markdown(
         """
-        Este proyecto presenta un caso de predicción de necesidad de riego con una app de Streamlit
-        pensada para portfolio. La idea es mostrar criterio de producto, claridad analítica y una
-        lectura del dataset que conecte directamente con decisiones de modelado.
+        Este proyecto presenta un caso de predicción de necesidad de riego. OPbjetivo entender el datase y encontrar patrones relevantes. .
         """
     )
 
@@ -37,7 +35,7 @@ with st.container(border=True):
     st.subheader("Qué puedes explorar")
     st.markdown(
         """
-        - `Dashboard de Portfolio`: una vista EDA limpia, explicable y lista para entrevista.
+        - Dashboard de Portfolio`: una vista EDA limpia, explicable y lista para entrevista.
         - Utilidades reutilizables en `streamlit/utils`: carga de datos, resúmenes y gráficos Plotly.
         - Una base preparada para crecer hacia métricas de modelo, predicciones o monitorización.
         """
